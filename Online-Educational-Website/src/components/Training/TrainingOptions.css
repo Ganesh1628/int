@@ -8,15 +8,14 @@
 }
 
 .training-card {
-    flex: 1;
-    max-width: 300px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    color: black; /* Adjust text color for better visibility */
-    background: linear-gradient(to right, #31bd7b, #3b97ee);
+  flex: 1;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #31bd7b, #3b97ee);
+  color: black; /* This ensures all text, including paragraphs, remains black */
 }
-
   
   h2 {
     font-size: 24px;
@@ -36,9 +35,8 @@
   }
   
   ul li, p {
-    color: rgb(0, 0, 0);
-    font-size: 22px; /* Increase text size */
-    /* font-style: italic; */
-    line-height: 1.5; /* Improve readability */
-    margin: 8px 0; /* Adjust spacing */
+    color: black !important; /* Ensure paragraph text remains black */
+    font-size: 22px; 
+    line-height: 1.5; 
+    margin: 8px 0;
 }
