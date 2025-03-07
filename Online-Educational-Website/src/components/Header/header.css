@@ -1,0 +1,225 @@
+/* Header Styles */
+.header {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 80px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(24, 23, 22, 0.6);
+  z-index: 1000; /* Ensure header stays above other content */
+  border-bottom-left-radius: 20px; /* Curved bottom edge */
+  border-bottom-right-radius: 20px; /* Curved bottom edge */
+}
+
+/* Add padding to the main content to avoid overlap */
+.main-content {
+  padding-top: 100px; /* Adjust this value based on the header height */
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__item a {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__item a:hover {
+  color: #17bf9e;
+}
+
+.nav__right p {
+  font-weight: 500;
+  color: #0a2b1e;
+  font-size: 1.1rem;
+}
+
+.mobile__menu {
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 10, 10, 0.8);
+    z-index: 99;
+    display: none;
+  }
+
+  .nav__list {
+    position: absolute;
+    background: #fff;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    padding-top: 80px;
+  }
+
+  .mobile__menu {
+    display: block;
+  }
+  .nav__right {
+    display: none;
+  }
+
+  .active__menu {
+    display: block;
+  }
+}
+
+/* Dropdown Styles */
+.dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  font-size: 15px;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+/* Dropdown Styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f0e68c; /* Yellow */
+  color: black;
+  list-style: none;
+  padding: 10px 0; /* Adjusted padding */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  min-width: 220px;
+  z-index: 9999;
+  display: none;
+  max-height: 500px; /* Added max height for scrolling */
+  overflow-y: auto; /* Enable scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  /* msOverflowStyle: none; */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Show dropdown when hovered */
+.dropdown-wrapper:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dropdown Item Styling */
+.dropdown-item {
+  padding: 6px 20px; /* Further reduced padding */
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 50px;
+  text-align: left;
+  white-space: nowrap;
+  background: transparent;
+  border-bottom: 1px solid #f0f0f0; /* Added border between items */
+  margin: 0; /* Ensure no additional margin */
+  line-height: 1.2; /* Adjusted line height */
+}
+
+/* Remove border for the last item */
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover Effect */
+.dropdown-item:hover {
+  background: orange;
+  color: rgb(255, 255, 255);
+}
+
+/* Scroll Indicator Icon */
+.dropdown-menu::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 30px; /* Increased height for better visibility */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Prevents blocking scrolling */
+}
+
+.dropdown-menu::after div {
+  background-color: #f0e68c; /* Solid background for the arrow */
+  border-radius: 50%; /* Makes the background circular */
+  padding: 5px; /* Adds space around the arrow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-menu::after div svg {
+  color: black; /* Arrow color */
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.animated-phone {
+  animation: shake 0.5s ease-in-out;
+}
+
+
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: transparent; /* Ensure no background color */
+}
+
+.whatsapp-icon img {
+  width: 80px; /* Adjust the size as needed */
+  height: auto;
+  transition: transform 0.3s ease;
+  background: transparent; /* Ensure no background color */
+}
+
+.whatsapp-icon img:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}

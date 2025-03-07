@@ -1,0 +1,179 @@
+/* Full-width orange background for the "Students Testimonials" header */
+.full-width-header {
+  background-color: #ff4500; /* Orange background */
+  padding: 20px 0; /* Increased padding for better curve visibility */
+  width: 100%; /* Full width */
+  position: relative; /* Needed for the pseudo-element */
+  border-bottom-left-radius: 50px; /* Curved bottom edge */
+  border-bottom-right-radius: 50px; /* Curved bottom edge */
+}
+
+.header-box {
+  display: inline-block;
+  padding: 8px 8px;
+}
+
+.main-header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff; /* White text for contrast */
+  margin: 0;
+}
+
+/* Lower header without background */
+.sub-header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: left;
+  color: #000000; /* Gray text for the lower header */
+  margin-top: 20px;
+}
+
+/* Rating Section Styles */
+.rating-section {
+  margin-bottom: 30px;
+  text-align: right; /* Align to the right */
+}
+
+/* Stars for the Google review section */
+.google-stars {
+  display: flex;
+  justify-content: flex-end; /* Align stars to the right */
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.google-star-icon {
+  color: #ffd900; /* Gold color for stars */
+  font-size: 1.7rem; /* Default size for Google review stars */
+  margin-top: -30px; /* Move the box higher */
+}
+
+.rating-text {
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: 500;
+  margin-top: -20px; /* Move the box higher */
+}
+
+/* Testimonial Box Styles */
+.testimonial-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px 20px; /* Reduced top padding to move content higher */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #7a7878; /* Add border for the box */
+  height: 105%; /* Ensure all boxes have the same height */
+  margin-top: -30px; /* Move the box higher */
+}
+
+.testimonial-box p {
+  font-size: 1.2rem;
+  color: #1d1111;
+  line-height: 1.6;
+  margin-top: 0; /* Remove default margin to move text higher */
+  margin-bottom: 15px; /* Add spacing below the text */
+}
+
+.student__info h6 {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 15px;
+}
+
+/* Stars for individual reviews */
+.star-rating {
+  display: flex;
+  gap: 3px; /* Adds space between stars */
+  margin-top: 3px; /* Adds spacing between name and stars */
+}
+
+.star-rating .star-icon {
+  color: #ffd900; /* Yellow color for stars */
+  font-size: 1.2rem; /* Adjust size as needed */
+  margin: 0 2px; /* Add spacing between stars */
+}
+
+/* Navigation Arrows */
+.testimonials-wrapper {
+  position: relative;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.left-arrow {
+  left: -20px;
+}
+
+.right-arrow {
+  right: -20px;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Testimonial Image Styles */
+.testimonial-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.testimonial-img img {
+  width: 80px; /* Adjust size */
+  height: 80px;
+  border-radius: 50%; /* Make circular */
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #333;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000; /* Choose a color that fits your theme */
+}
+
+.student__info {
+  display: flex;
+  align-items: center; /* Aligns image and name horizontally */
+  gap: 10px; /* Adds space between the icon and name */
+}
+
+.feedback-icon {
+  width: 110px; /* Adjust size as needed */
+  height: 100px;
+  border-radius: 80%; /* Makes it round */
+}
+
+/* Add this to your testimonial.css */
+.rating-number {
+  font-weight: bold;
+  font-size: 70px;
+  color: rgb(1, 116, 20);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
